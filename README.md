@@ -30,10 +30,15 @@ Procedure Mystery(A, n)
 ### Part A: The Recurrence Relation
 Let $T(n)$ be the running time of `Mystery` on an input of size $n$. Write down a recurrence relation for the worst-case running time $T(n)$. You may assume $n$ is a power of 3 for simplicity. *(Note: You do not need to solve the recurrence relation yet, just formulate it).*
 
-$T(n)$ = $T(n/3)$ + $T(2n/3)$ + $O(n)$
+$T(n)$ = $T(n/3)$ + $T(2n/3)$ + $\theta(n)$
+- First recurrence equates to n/3 since k is n/3 and k is what is ceiling for the recurrence
+- Second recurrence equates to n - n/3 since k is equal to (n/3)
+- The combine results equates to linear time since it goes from 1 to n
 
 ### Part B: Visualizing Algorithm Behavior
 Without solving the recurrence, look closely at the recursive calls and the combine step. If you were to draw the recursion tree for this algorithm, what would it look like? Is the tree balanced or skewed? 
+
+The recursion tree would be skewed. Since the two recursions shrink by different rates the first being n/3 the other 2n/3 so the tree will look skewed and unbalanced.
 
 ---
 

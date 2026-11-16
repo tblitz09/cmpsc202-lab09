@@ -56,11 +56,11 @@ where $c$ is a positive constant.
 Analyze the running time of the algorithm by unrolling the recursion tree. Specifically, answer the following questions:
 
 1. **Root Work:** Find the amount of work done at the root level (level $0$) of the recursion tree.
-The total work done in the root level is $cn^2$
+- The total work done in the root level is $cn^2$
 2. **First Levels:** Find the amount of work done at level $1$ and level $2$ of the recursion tree.
-The first level would split into three work values of $c(n/2)^2$ which means that the work adds up to $3c(n/2)^2$. This equates to $3/4cn^2$. The second level would then split into nine more work values of $c(n/4)^2$ which means that the work adds up to $9c(n/4)^2$. This equates to $9/16cn^2$
+- The first level would split into three work values of $c(n/2)^2$ which means that the work adds up to $3c(n/2)^2$. This equates to $3/4cn^2$. The second level would then split into nine more work values of $c(n/4)^2$ which means that the work adds up to $9c(n/4)^2$. This equates to $9/16cn^2$
 3. **Tree Height:** Find the height of the recursion tree (at what level does the input size reach $1$?).
-The input size for T() is n but is divided by 2 for every level. So level 1, the input would be n/2. Level 2, the input would be n/4 and so on. So the input size for a certain number like x would be n/(2^x). When solving for x, we get the height of log2(n).
+- The input size for T() is n but is divided by 2 for every level. So level 1, the input would be n/2. Level 2, the input would be n/4 and so on. So the input size for a certain number like x would be n/(2^x). When solving for x, we get the height of log2(n).
 
 **Bonus!** Find a general formula for the total work done at level $i$ of the recursion tree.
 
@@ -69,9 +69,11 @@ The input size for T() is n but is divided by 2 for every level. So level 1, the
 ## Exercise 3: Reflection
 
 1. During lecture last week, we looked at two different divide-and-conquer algorithms. What were these algorithms and what problems did they solve?
-
+We looked at merge sort and nearest neigbor. Merge sort allowed us to sort a list into sublists until each individual element is into its own sublist and then merged back together in sorted order. This sorting algorithm has a worst case running time of $\theta(n log(n))$. 
+We also looked at the nearest neighbor problem where we used a divide and conquer algorithm where we divided the dots that we were trying to find the nearest neighbor of. In the divided areas, we find the closest neighbor dots and then finding the minimum distance that two dots could be to the divided line. Then the algorithm checks if any dots fit this description, if not then the closest pair of the two are the nearest neighbors. This algorithm also has a worst case running time of $\theta(n log(n))$
 
 
 
 
 2. How do the algorithms you analyzed in this lab compare to the ones we discussed in lecture? Specifically, each algorithm differs from the two we discussed in lecture in one important way. For each of the algorithms above, what is that difference?
+The ones we 

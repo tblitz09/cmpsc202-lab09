@@ -32,7 +32,7 @@ Let $T(n)$ be the running time of `Mystery` on an input of size $n$. Write down 
 
 $T(n)$ = $T(n/3)$ + $T(2n/3)$ + $\theta(n)$
 - First recurrence equates to n/3 since k is n/3 and k is what is ceiling for the recurrence
-- Second recurrence equates to n - n/3 since k is equal to (n/3)
+- Second recurrence equates to n - n/3 which is 2n/3 since k is equal to (n/3)
 - The combine results equates to linear time since it goes from 1 to n
 
 ### Part B: Visualizing Algorithm Behavior
@@ -56,8 +56,11 @@ where $c$ is a positive constant.
 Analyze the running time of the algorithm by unrolling the recursion tree. Specifically, answer the following questions:
 
 1. **Root Work:** Find the amount of work done at the root level (level $0$) of the recursion tree.
+The total work done in the root level is $cn^2$
 2. **First Levels:** Find the amount of work done at level $1$ and level $2$ of the recursion tree.
+The first level would split into three work values of $c(n/2)^2$ which means that the work adds up to $3c(n/2)^2$. This equates to $3/4cn^2$. The second level would then split into nine more work values of $c(n/4)^2$ which means that the work adds up to $9c(n/4)^2$. This equates to $9/16cn^2$
 3. **Tree Height:** Find the height of the recursion tree (at what level does the input size reach $1$?).
+
 
 **Bonus!** Find a general formula for the total work done at level $i$ of the recursion tree.
 

@@ -69,11 +69,11 @@ Analyze the running time of the algorithm by unrolling the recursion tree. Speci
 ## Exercise 3: Reflection
 
 1. During lecture last week, we looked at two different divide-and-conquer algorithms. What were these algorithms and what problems did they solve?
-We looked at merge sort and nearest neigbor. Merge sort allowed us to sort a list into sublists until each individual element is into its own sublist and then merged back together in sorted order. This sorting algorithm has a worst case running time of $\theta(n log(n))$. 
-We also looked at the nearest neighbor problem where we used a divide and conquer algorithm where we divided the dots that we were trying to find the nearest neighbor of. In the divided areas, we find the closest neighbor dots and then finding the minimum distance that two dots could be to the divided line. Then the algorithm checks if any dots fit this description, if not then the closest pair of the two are the nearest neighbors. This algorithm also has a worst case running time of $\theta(n log(n))$
+- We looked at merge sort and nearest neigbor. Merge sort allowed us to sort a list into sublists until each individual element is into its own sublist and then merged back together in sorted order. This sorting algorithm has a worst case running time of $\theta(n log(n))$. 
+- We also looked at the nearest neighbor problem where we used a divide and conquer algorithm where we divided the dots that we were trying to find the nearest neighbor of. In the divided areas, we find the closest neighbor dots and then finding the minimum distance that two dots could be to the divided line. Then the algorithm checks if any dots fit this description, if not then the closest pair of the two are the nearest neighbors. This algorithm also has a worst case running time of $\theta(n log(n))$
 
 
 
 
 2. How do the algorithms you analyzed in this lab compare to the ones we discussed in lecture? Specifically, each algorithm differs from the two we discussed in lecture in one important way. For each of the algorithms above, what is that difference?
-The ones we 
+- The Mystery algorithm can be compared to merge sort and nearest neighbor. The mystery algorithm had subproblems that were skewed and unequal while merge sort and nearest neighbor had equal subproblems and a balanced tree. The second algorithm in Exercise 2 splits into 3 subproblems while merge sort and nearest neighbor split into 2 subproblems. Which means that the second algorithm ends up doing more work than the two algorithms we talked about in class. 
